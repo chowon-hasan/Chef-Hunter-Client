@@ -1,0 +1,22 @@
+.chefs_card {
+  margin: 20px 10px;
+  border: 1px solid #06517a91;
+  padding: 10px;
+  border-radius: 10px;
+}
+.chefs_card img {
+  width: 100%;
+  height: 500px;
+}
+.chefs_card h3 {
+  font-size: 22px;
+}
+.chefs_heading h1 {
+  color: #06517a91;
+  font-family: "Dancing Script", cursive;
+}
+.details_btn {
+  background-color: #06517a;
+  border: none;
+  padding: 10px 30px;
+}

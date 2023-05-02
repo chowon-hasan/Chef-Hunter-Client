@@ -14,11 +14,7 @@ const Header = () => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="ms-auto my-2 my-lg-0"
-                style={{ maxHeight: "100px; align-items: center;" }}
-                navbarScroll
-              >
+              <Nav className="ms-auto my-2 my-lg-0" navbarScroll>
                 <Link className="nav_link" to="/">
                   Home
                 </Link>
