@@ -1,0 +1,20 @@
+.kitchen_body {
+  position: relative;
+}
+.kit_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.kit_title {
+  font-family: "Dancing Script", cursive;
+  color: #06517a;
+  text-transform: capitalize;
+}
+.kit_heading {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: #06517a;
+  font-size: 60px;
+}

@@ -39,6 +39,9 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+      <div className="text-center mt-5">
+        <p>All rights reserved ©2023 italin's Chefs</p>
+      </div>
     </section>
   );
 };
