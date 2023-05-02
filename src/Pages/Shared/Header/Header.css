@@ -1,0 +1,33 @@
+.nav_link {
+  text-decoration: none;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.nav_link:hover {
+  color: #fff;
+}
+.Head_bg {
+  background-color: #026590;
+  padding: 20px 0;
+}
+.log_btn {
+  background-color: #06517a;
+  padding: 10px 40px;
+  color: #ffffff;
+  border: none;
+  margin-left: 40px;
+  font-size: 20px;
+}
+.log_btn:hover {
+  background-color: #ffffff;
+  color: #06517a;
+}
+.navbar-nav {
+  align-items: center !important;
+}
+.Logo {
+  color: #fff;
+  font-size: 30px;
+  font-family: "Bruno Ace SC", cursive;
+}
