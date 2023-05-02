@@ -1,10 +1,16 @@
 .foot_bg {
   background-color: #026590;
   color: #fff;
-  font-size: 20px;
 }
 .Logo_text {
   font-size: 30px;
   font-family: "Bruno Ace SC", cursive;
   color: #fff;
+}
+.links_ul li {
+  font-size: 20px;
+  text-align: center;
+}
+.links_ul {
+  list-style: none;
 }

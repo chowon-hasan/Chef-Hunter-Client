@@ -1,0 +1,14 @@
+.banner_bg {
+  background-image: linear-gradient(#0000009c, #000000c7),
+    url(../../../../public/images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_title {
+  font-size: 60px;
+}

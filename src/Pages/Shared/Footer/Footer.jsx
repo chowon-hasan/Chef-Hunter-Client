@@ -11,15 +11,15 @@ const Footer = () => {
             <div className="">
               <h3 className="Logo_text">Italian's Chefs</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel in
-                ab quasi perspiciatis ratione debitis quis porro laudantium enim
-                nemo a fuga, ut eius fugit optio non, similique sit temporibus?
+                As Italy is known for its sumptuous dishes, so are the famous
+                chefs behind the grandeur of Italian cuisine. By producing the
+                best of the bests.
               </p>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={4}>
             <div className="">
-              <ul>
+              <ul className="links_ul">
                 <li>Contact Us</li>
                 <li>Chef's List</li>
                 <li>Chefs Origin</li>
@@ -29,7 +29,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col lg={5}>
+          <Col lg={4}>
             <div className="">
               <p>Email: Example@gmail.com</p>
               <p>Phone: +99 09 876 55</p>
