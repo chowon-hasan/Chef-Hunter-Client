@@ -11,6 +11,7 @@ const Recipes = () => {
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
+
   return (
     <div>
       <h1 className="text-center my-5 heading">
@@ -18,7 +19,7 @@ const Recipes = () => {
       </h1>
       <Row>
         {recipes.map((d) => (
-          <Col lg={4}>
+          <Col key={d.id} lg={4}>
             <div className="recipes_card">
               <h3 className="text-center">
                 <span className="recipes_title">{d.recipeName}</span>
