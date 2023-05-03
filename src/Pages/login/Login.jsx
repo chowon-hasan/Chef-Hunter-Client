@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
+import "./login.css";
 import { Button, Col, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import app from "../../firebase/firebase.config";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const auth = getAuth(app);
 
@@ -66,6 +68,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Enter email"
+                required
               />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
@@ -78,6 +81,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
+                required
               />
             </Form.Group>
             <Button variant="primary" type="submit">
@@ -88,9 +92,19 @@ const Login = () => {
             </Form.Text>
           </Form>
           <div className="">
-            <h2>Sign in with goole</h2>
-            <Button onClick={handlePopup}>Google</Button>
-            <Button onClick={handleGithub}>Github</Button>
+            <p className="mt-5">Or you can sign in with</p>
+            <div className="d-flex">
+              <div className="">
+                <Button className="signup_btn" onClick={handlePopup}>
+                  <FaGoogle />
+                </Button>
+              </div>
+              <div className="ms-5">
+                <Button className="signup_btn" onClick={handleGithub}>
+                  <FaGithub />
+                </Button>
+              </div>
+            </div>
           </div>
         </Col>
       </Container>

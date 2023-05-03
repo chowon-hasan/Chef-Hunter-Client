@@ -6,6 +6,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
+  console.log(user);
 
   const handleLogout = () => {
     logout();
@@ -42,6 +43,7 @@ const Header = () => {
                       className="user"
                       src="../../../../public/images/user.jpg"
                       alt=""
+                      title="Example text"
                     />
                   ) : (
                     <img

@@ -31,7 +31,7 @@ const Register = () => {
   return (
     <div className="my-5">
       <Container>
-        <Col className="m-auto" lg={6}>
+        <Col className="m-auto border p-5" lg={6}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Your Name</Form.Label>
