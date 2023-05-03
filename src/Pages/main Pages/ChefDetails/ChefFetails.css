@@ -1,0 +1,29 @@
+.details_bg {
+  background-image: linear-gradient(#000000b8, #000000ad),
+    url(../../../../public/images/detailsbg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chef_img {
+  height: 500px;
+  border: 2px solid #fff;
+}
+.main_details {
+}
+.main_details span {
+  color: #fff;
+  margin-right: 30px;
+}
+.details_content h1 {
+  color: #fff;
+}
+.details_content p {
+  color: #fff;
+}
+.details_content {
+}
