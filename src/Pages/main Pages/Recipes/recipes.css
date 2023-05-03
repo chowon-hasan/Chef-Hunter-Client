@@ -1,0 +1,25 @@
+.recipes_card {
+  border: 1px solid #06517a;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.recipes_card img {
+  width: 100%;
+  height: 200px;
+}
+.recipes_card h3 {
+  font-size: 16px;
+}
+.recipes_card h5 {
+  margin: 20px 0;
+  font-size: 16px;
+  min-height: 60px;
+}
+.heading {
+  font-family: "Dancing Script", cursive;
+}
+.recipes_title {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+}

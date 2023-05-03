@@ -14,6 +14,9 @@
   border: 2px solid #fff;
 }
 .main_details {
+  background-color: #06517a;
+  padding: 10px;
+  text-align: center;
 }
 .main_details span {
   color: #fff;
