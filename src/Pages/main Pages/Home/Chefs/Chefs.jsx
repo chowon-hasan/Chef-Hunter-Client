@@ -6,15 +6,11 @@ import { Link } from "react-router-dom";
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
 
-  //   const { id, image, name, yearsOfExperience, numberOfRecipes, likes } = chefs;
-
   useEffect(() => {
     fetch("http://localhost:3000/")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
-
-  console.log(chefs);
 
   return (
     <Container className="my-5">
@@ -35,7 +31,7 @@ const Chefs = () => {
                 <p>Years of Experience : {c.yearsOfExperience}</p>
                 <p>Number of Recipes : {c.numberOfRecipes}</p>
                 <p>Likes : {c.likes}</p>
-                <Link>
+                <Link to={`/chefDetails/${c.id}`}>
                   <Button className="details_btn">Chef Details</Button>
                 </Link>
               </div>
