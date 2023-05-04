@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Col, Container, Row } from "react-bootstrap";
+import { FaBeer, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -30,11 +31,16 @@ const Footer = () => {
             </div>
           </Col>
           <Col lg={4}>
-            <div className="">
+            <div className="social_body">
               <p>Email: Example@gmail.com</p>
               <p>Phone: +99 09 876 55</p>
               <hr />
               <p>Social links</p>
+              <div className="">
+                <FaFacebook />
+                <FaTwitter className="icons" />
+                <FaInstagram />
+              </div>
             </div>
           </Col>
         </Row>

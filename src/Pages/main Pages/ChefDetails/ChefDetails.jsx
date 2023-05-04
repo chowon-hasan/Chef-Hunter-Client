@@ -3,6 +3,7 @@ import "./ChefFetails.css";
 import { useLoaderData, useParams } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import Recipes from "../Recipes/Recipes";
+import LazyLoad from "react-lazy-load";
 
 const ChefDetails = () => {
   const [datastate, setDataState] = useState({});
@@ -43,7 +44,9 @@ const ChefDetails = () => {
             </Col>
             <Col lg={6}>
               <div className="text-center">
-                <img className="chef_img" src={image} alt="" />
+                <LazyLoad>
+                  <img className="chef_img" src={image} alt="" />
+                </LazyLoad>
               </div>
             </Col>
           </Row>

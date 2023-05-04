@@ -14,3 +14,13 @@
 .links_ul {
   list-style: none;
 }
+.icons {
+  margin: 0 30px;
+  font-size: 30px;
+}
+
+@media (max-width: 575px) {
+  .social_body {
+    text-align: center;
+  }
+}

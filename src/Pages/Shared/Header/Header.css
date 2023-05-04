@@ -46,3 +46,26 @@
   text-decoration: none;
   margin: 0 30px;
 }
+.active:hover {
+  color: #fff;
+}
+.defaultt:hover {
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  .active,
+  .defaultt {
+    margin-bottom: 10px;
+  }
+  .log_btn {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .user {
+    margin-left: 0;
+  }
+  .banner_bg {
+    padding: 40px 0;
+  }
+}

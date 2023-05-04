@@ -18,3 +18,8 @@
   color: #06517a;
   font-size: 60px;
 }
+@media (max-width: 575px) {
+  .kit_title {
+    margin-top: 20px;
+  }
+}
