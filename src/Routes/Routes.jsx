@@ -25,7 +25,10 @@ const router = createBrowserRouter([
             <ChefDetails></ChefDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:3000/chefDetails`),
+        loader: () =>
+          fetch(
+            `https://chef-hunter-server-chowon-hasan.vercel.app/chefDetails`
+          ),
       },
       {
         path: "/blog",

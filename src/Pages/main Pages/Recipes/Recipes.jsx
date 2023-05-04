@@ -12,7 +12,7 @@ const Recipes = () => {
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/")
+    fetch("https://chef-hunter-server-chowon-hasan.vercel.app/")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
