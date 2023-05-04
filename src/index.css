@@ -2,3 +2,7 @@ p,
 h3 {
   font-family: "Poppins", sans-serif;
 }
+.spinner {
+  text-align: center;
+  margin: 230px 0;
+}

@@ -23,8 +23,8 @@ const Chefs = () => {
           </p>
         </div>
         {chefs.map((c) => (
-          <Col lg={4}>
-            <div className="chefs_card" key={c.id}>
+          <Col key={c.id} lg={4}>
+            <div className="chefs_card">
               <img src={c.image} alt="" />
               <div className="ms-3">
                 <h3 className="mt-4">Name : {c.name}</h3>

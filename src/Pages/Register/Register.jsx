@@ -1,30 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Col, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [regError, setRegError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const photo = form.photo.value;
-    form.reset();
+
+    if (password < 6) {
+      setRegError("Please provide at least 6 characters");
+    } else if (!/(?=.[A-Z])/.test(password)) {
+      setRegError("Please add at least one uppercase");
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        console.log(createdUser);
+        form.reset();
         navigate("/chefDetails/1");
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
     console.log(name, password, email, photo);
   };
 
@@ -79,6 +85,7 @@ const Register = () => {
             <Form.Text className="text-muted ms-3">
               Already have an account? <Link to="/login">LogIn</Link>
             </Form.Text>
+            <p className="text-danger mt-3">{regError}</p>
           </Form>
         </Col>
       </Container>

@@ -14,7 +14,7 @@
 .recipes_card h5 {
   margin: 20px 0;
   font-size: 16px;
-  min-height: 60px;
+  min-height: 80px;
 }
 .heading {
   font-family: "Dancing Script", cursive;
@@ -22,4 +22,22 @@
 .recipes_title {
   font-family: "Dancing Script", cursive;
   font-size: 30px;
+}
+.rating_bg {
+  background-color: #06517a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon_btn {
+  background-color: transparent;
+  border: none;
+}
+.icon_btn:hover {
+  background-color: transparent;
+}
+.Toastify__toast-theme--light {
+  background-color: #06517a !important;
+  color: #fff !important;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./login.css";
 import { Button, Col, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -17,6 +17,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  const [logError, setLogError] = useState("");
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -32,7 +33,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        setLogError(error.message);
       });
     console.log(email, password);
   };
@@ -43,7 +44,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        setLogError(error.message);
       });
   };
   const handleGithub = () => {
@@ -53,7 +54,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        setLogError(error.message);
       });
   };
 
@@ -90,9 +91,10 @@ const Login = () => {
             <Form.Text className="text-muted ms-3">
               Already have an account? <Link to="/register">Register here</Link>
             </Form.Text>
+            <p className="text-danger mt-3">{logError}</p>
           </Form>
           <div className="">
-            <p className="mt-5">Or you can sign in with</p>
+            <p className="mt-3">Or you can sign in with</p>
             <div className="d-flex">
               <div className="">
                 <Button className="signup_btn" onClick={handlePopup}>

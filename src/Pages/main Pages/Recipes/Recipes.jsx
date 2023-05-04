@@ -2,15 +2,26 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import "./recipes.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaHeart, FaRegStar, FaStar, FaStarHalf } from "react-icons/fa";
+import Rating from "react-rating";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
+
+  const handleFavIcon = (event) => {
+    event.target.disabled = true;
+    toast("Added On Favorite List");
+    setDisabled(true);
+  };
 
   return (
     <div>
@@ -41,6 +52,21 @@ const Recipes = () => {
                   )}
                 </span>
               </p>
+              <div className="rating_bg py-1 px-3 text-white">
+                <Rating
+                  placeholderRating={d?.rating}
+                  emptySymbol={<FaRegStar />}
+                  placeholderSymbol={<FaStar />}
+                  fullSymbol={<FaStarHalf />}
+                  readonly
+                />
+                <div className="flex-grow-3">
+                  <Button className="icon_btn" onClick={handleFavIcon}>
+                    <FaHeart />
+                    <ToastContainer />
+                  </Button>
+                </div>
+              </div>
             </div>
           </Col>
         ))}

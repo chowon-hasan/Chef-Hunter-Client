@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./Header.css";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
   console.log(user);
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -23,11 +24,21 @@ const Header = () => {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav className="ms-auto my-2 my-lg-0" navbarScroll>
-                <Link className="nav_link" to="/">
+                <Link
+                  to="/"
+                  className={location.pathname === "/" ? "active" : "defaultt"}
+                >
                   Home
                 </Link>
-                <Link className="nav_link">Blog</Link>
-                <Link className="nav_link">About</Link>
+                <Link
+                  to="/blog"
+                  className={
+                    location.pathname === "/blog" ? "active" : "defaultt"
+                  }
+                >
+                  Blog
+                </Link>
+
                 <Link to="/login">
                   {user ? (
                     <Button onClick={handleLogout} className="log_btn">
@@ -43,7 +54,7 @@ const Header = () => {
                       className="user"
                       src="../../../../public/images/user.jpg"
                       alt=""
-                      title="Example text"
+                      title={user ? user.displayName : "Please register"}
                     />
                   ) : (
                     <img

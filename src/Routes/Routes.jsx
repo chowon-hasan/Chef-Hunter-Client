@@ -5,11 +5,14 @@ import ChefDetails from "../Pages/main Pages/ChefDetails/ChefDetails";
 import Login from "../Pages/login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Blogs from "../Pages/blog/Blogs";
+import ErrorPage from "../Pages/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -23,6 +26,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch(`http://localhost:3000/chefDetails`),
+      },
+      {
+        path: "/blog",
+        element: <Blogs></Blogs>,
       },
       {
         path: "/login",
