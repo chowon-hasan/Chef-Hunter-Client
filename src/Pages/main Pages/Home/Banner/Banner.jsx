@@ -2,7 +2,7 @@ import React from "react";
 import "./banner.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Lottie from "lottie-react";
-import bannerImg from "../../../../../src/assets/120972-chef.json";
+// import bannerImg from "/images/chef-lottie.json";
 
 const Banner = () => {
   return (
@@ -31,7 +31,8 @@ const Banner = () => {
           </Col>
           <Col lg={6}>
             <div className="">
-              <Lottie animationData={bannerImg} loop={true}></Lottie>
+              {/* <Lottie animationData={bannerImg} loop={true}></Lottie> */}
+              <img src="/images/chef-lotti.gif" alt="" />
             </div>
           </Col>
         </Row>

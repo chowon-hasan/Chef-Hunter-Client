@@ -11,16 +11,8 @@ const Kitchen = () => {
           <Col lg={6}>
             <div className="">
               <div className="kitchen_body">
-                <img
-                  className="mt-5"
-                  src="../../../../../public/images/kitchen-1.jpg"
-                  alt=""
-                />
-                <img
-                  className="kit_bg"
-                  src="../../../../../public/images/kitchen-2.jpg"
-                  alt=""
-                />
+                <img className="mt-5" src="/images/kitchen-1.jpg" alt="" />
+                <img className="kit_bg" src="/images/kitchen-2.jpg" alt="" />
               </div>
             </div>
           </Col>

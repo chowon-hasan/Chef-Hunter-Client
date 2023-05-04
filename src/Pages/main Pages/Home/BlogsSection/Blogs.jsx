@@ -13,11 +13,7 @@ const Blogs = () => {
         <Row>
           <Col lg={6}>
             <div className="">
-              <img
-                className="img-fluid"
-                src="../../../../../public/images/blog-1.jpg"
-                alt=""
-              />
+              <img className="img-fluid" src="/images/blog-1.jpg" alt="" />
             </div>
           </Col>
 
@@ -51,11 +47,7 @@ const Blogs = () => {
 
           <Col className="my-5" lg={6}>
             <div className="">
-              <img
-                className="img-fluid"
-                src="../../../../../public/images/blog-2.jpg"
-                alt=""
-              />
+              <img className="img-fluid" src="/images/blog-2.jpg" alt="" />
             </div>
           </Col>
         </Row>

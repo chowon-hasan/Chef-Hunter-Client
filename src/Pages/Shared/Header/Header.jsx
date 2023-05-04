@@ -52,16 +52,12 @@ const Header = () => {
                   {user ? (
                     <img
                       className="user"
-                      src="../../../../public/images/user.jpg"
+                      src="/images/user.jpg"
                       alt=""
                       title={user ? user.displayName : "Please register"}
                     />
                   ) : (
-                    <img
-                      className="user"
-                      src="../../../../public/images/noyUser.png"
-                      alt=""
-                    />
+                    <img className="user" src="/images/noyUser.png" alt="" />
                   )}
                 </div>
               </Nav>
