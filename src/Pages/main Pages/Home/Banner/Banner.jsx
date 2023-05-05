@@ -1,8 +1,6 @@
 import React from "react";
 import "./banner.css";
 import { Col, Container, Row } from "react-bootstrap";
-import Lottie from "lottie-react";
-// import bannerImg from "/images/chef-lottie.json";
 
 const Banner = () => {
   return (
@@ -31,8 +29,7 @@ const Banner = () => {
           </Col>
           <Col lg={6}>
             <div className="">
-              {/* <Lottie animationData={bannerImg} loop={true}></Lottie> */}
-              <img src="/images/chef-lotti.gif" alt="" />
+              <img className="img-fluid" src="/images/chef-lotti.gif" alt="" />
             </div>
           </Col>
         </Row>

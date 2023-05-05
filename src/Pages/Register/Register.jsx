@@ -31,7 +31,6 @@ const Register = () => {
         navigate("/chefDetails/1");
       })
       .catch((error) => {});
-    console.log(name, password, email, photo);
   };
 
   return (

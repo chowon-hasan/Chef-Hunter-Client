@@ -24,8 +24,6 @@ const ChefDetails = () => {
     likes,
   } = datastate;
 
-  console.log(datastate);
-
   return (
     <section>
       <div className="details_bg">

@@ -29,13 +29,11 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         const signedUser = result.user;
-        console.log(signedUser);
         navigate(from, { replace: true });
       })
       .catch((error) => {
         setLogError(error.message);
       });
-    console.log(email, password);
   };
   const handlePopup = () => {
     signInWithPopup(auth, provider)
